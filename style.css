@@ -1,0 +1,11 @@
+.color {
+
+    background-color: aqua;
+
+}
+
+.full-screen {
+    background-image: url(images/Kodama.jpg);
+    margin-bottom: 20px;
+    background-color: brown;
+}
