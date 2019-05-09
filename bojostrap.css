@@ -108,6 +108,7 @@ section {
 
 body {
     line-height: 1;
+    font-family: 'Roboto', sans-serif;
 }
 
 ol,
@@ -136,7 +137,7 @@ table {
 
 
 /*Layout*/
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /*clearfix*/
 .row:after {
@@ -149,7 +150,10 @@ table {
 
 .container {
     width: 100%;
+    padding: 0px;
 }
+
+
 
 .full-screen {
     height: 100vh;
@@ -248,6 +252,7 @@ table {
 
 .image {
     max-width: 100%;
+    padding: 0px;
     height: auto;
     background-color: #000;
 }
@@ -256,11 +261,51 @@ a {
     text-decoration: none;
 }
 
+/*navigation*/
+.navigation {
+    list-style: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 
+}
 
-/*media*/
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
 
 @media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
 
     .col1,
     .col2,
@@ -276,5 +321,4 @@ a {
     .col12 {
         flex-basis: 100%;
     }
-
 }
