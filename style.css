@@ -1,11 +1,47 @@
-.color {
+.full-screen {
+    background-image: url(images/auto-automobile-automotive-919073.jpg);
+    filter: grayscale(100%);
+    background-color: brown;
 
-    background-color: aqua;
+    -webkit-transition-property: filter;
+    /* Safari */
+    -webkit-transition-duration: 3s;
+    /* Safari */
+    -webkit-transition-delay: 1s;
+    /* Safari */
+    transition-property: filter;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+.full-screen:hover {
+    filter: grayscale(0%);
+}
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    z-index: 999;
+    background-color: #000;
 
 }
 
-.full-screen {
-    background-image: url(images/Kodama.jpg);
-    margin-bottom: 20px;
-    background-color: brown;
+nav a {
+    font-size: 18px;
+}
+
+.navigation a {
+    color: #ECF0F1;
+}
+
+.navigation a:hover {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.main {
+    background-color: #ECF0F1;
 }
